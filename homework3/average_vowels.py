@@ -10,20 +10,18 @@
 
 def counting_vowels_and_consonants(lineplease):
     n = len(str(lineplease))
-    t=0
     vowels = 0
     consonants = 0
     while n > 0:
-        n -=1 
-        if lineplease[t].isalpha():
-            if lineplease[t] in "aeiou":
+        if lineplease[n-1].isalpha():
+            if lineplease[n-1] in "aeiou":
                 vowels += 1
             else:
                 consonants += 1
-        t += 1
+        n -=1 
     return (vowels, consonants)
 
-print(counting_vowels_and_consonants("and then there was one"))
+print(counting_vowels_and_consonants("hello"))
 
 # Hint: You can use .isalpha() to check if a character is a letter.
 
